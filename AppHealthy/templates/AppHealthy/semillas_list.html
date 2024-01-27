@@ -1,0 +1,39 @@
+{% extends "AppHealthy/padre.html" %}
+
+{% block titulo %} 
+
+<form action="/listasemillas/" method="GET"> 
+</form>
+<style>
+    h4 {color:white}
+</style>
+
+{% for semilla in object_list %}
+
+<h4>
+<p> {{semilla.nombre}} </p>
+</h4>
+
+&nbsp;
+<a href="{% url 'ActualizaSemilla' semilla.id %}"> Actualizar </a> 
+&nbsp;
+<a href="{% url 'BorrarSemilla' semilla.id %}"> Borar </a>
+
+
+
+{% endfor %}
+{% endblock %}
+
+
+{% block contenido1 %}
+<br>
+<br>
+&nbsp;
+<a class="btn btn-primary" href="{% url 'CrearSemillas' %}"> Nuevo </a>
+&nbsp;
+<a class="btn btn-primary" href="{% url 'BuscaSemilla' %}"> Buscar </a>
+
+
+{% endblock %}
+
+

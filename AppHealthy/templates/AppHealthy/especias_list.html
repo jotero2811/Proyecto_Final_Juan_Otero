@@ -1,0 +1,39 @@
+{% extends "AppHealthy/padre.html" %}
+
+{% block titulo %} 
+
+<form action="/listaespecias/" method="GET"> 
+</form>
+<style>
+    h4 {color:white}
+</style>
+
+{% for especia in object_list %}
+
+<h4>
+<p> {{especia.nombre}} </p>
+</h4>
+
+&nbsp;
+<a href="{% url 'ActualizaEspecia' especia.id %}"> Actualizar </a> 
+&nbsp;
+<a href="{% url 'BorrarEspecia' especia.id %}"> Borar </a>
+
+
+
+{% endfor %}
+{% endblock %}
+
+
+{% block contenido1 %}
+<br>
+<br>
+&nbsp;
+<a class="btn btn-primary" href="{% url 'CrearEspecias' %}"> Nuevo </a>
+&nbsp;
+<a class="btn btn-primary" href="{% url 'BuscaEspecia' %}"> Buscar </a>
+
+
+{% endblock %}
+
+

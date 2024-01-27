@@ -1,0 +1,39 @@
+{% extends "AppHealthy/padre.html" %}
+
+{% block titulo %} 
+
+<form action="/listafrutos/" method="GET"> 
+</form>
+<style>
+    h4 {color:white}
+</style>
+
+{% for fruto in object_list %}
+
+<h4>
+<p> {{fruto.nombre}} </p>
+</h4>
+
+&nbsp;
+<a href="{% url 'ActualizaFruto' fruto.id %}"> Actualizar </a> 
+&nbsp;
+<a href="{% url 'BorrarFruto' fruto.id %}"> Borar </a>
+
+
+
+{% endfor %}
+{% endblock %}
+
+
+{% block contenido1 %}
+<br>
+<br>
+&nbsp;
+<a class="btn btn-primary" href="{% url 'CrearFrutos' %}"> Nuevo </a>
+&nbsp;
+<a class="btn btn-primary" href="{% url 'BuscaFruto' %}"> Buscar </a>
+
+
+{% endblock %}
+
+

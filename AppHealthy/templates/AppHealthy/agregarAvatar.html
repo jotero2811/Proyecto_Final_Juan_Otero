@@ -1,0 +1,27 @@
+{% extends "AppHealthy/padre.html" %}
+
+{% load static %} 
+
+
+{% block titulo %} 
+
+<style>
+    h4 {color:white}
+</style>
+
+<h4>Cambiar Avatar</h4>
+
+{% endblock %}
+
+{% block contenido1 %}
+
+<form action="" method="POST" enctype="multipart/form-data">{% csrf_token %}
+
+  <h4> {{formulario.as_p}} </h4>
+
+  <button type="submit">Enviar</button>
+
+</form>
+
+
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "AppHealthy/padre.html" %}
+
+{% block titulo %} 
+
+<style>
+    h4 {color:white}
+</style>
+<h4>Editar Perfi</h4>
+<h6><a class="btn btn-primary"" href="{% url 'Avatar1' %}">Cambiar Avatar</a></h6>
+<br>
+{% endblock %}
+
+{% block contenido1 %}
+
+<h4>
+<form action="" method="POST"> {% csrf_token %}
+
+    {{formu}}
+
+    <input type="submit" value="Actualizar"></h4>
+</form>
+
+
+{% endblock %}

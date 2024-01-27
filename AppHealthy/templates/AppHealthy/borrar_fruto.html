@@ -1,0 +1,19 @@
+{% extends "AppHealthy/padre.html" %}
+
+{% block titulo %}
+<style>
+h4 {color: white}
+</style>
+<h4> Frutos Secos</h4>
+&nbsp;
+{% endblock %}
+
+{% block contenido1 %}
+
+<form action="" method="POST"> {% csrf_token %}
+
+   <h4><p> Estás seguro de borrar {{object}} </p> </h4>
+
+    <input type="submit" value="Borrar">
+</form>
+{% endblock %}
